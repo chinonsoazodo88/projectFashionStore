@@ -16,6 +16,10 @@ header{
 nav{
     width: 100%;
     height: 3.5rem;
+    z-index: 10000;
+    /* position: fixed;
+    width: 100%;
+    top: 0; */
 }
 
 .innerNav{
@@ -131,13 +135,15 @@ nav{
 
 .searchOrder{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 2rem;
 }
 
 .search{
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
     border-radius: 20px;
-    /* height: 23px; */
+    height: 40px;
     background-color: gray;
 }
 
@@ -155,8 +161,8 @@ nav{
 .search > button , .cart{
     /* border: 1px solid #000; */
     border-radius: 20px;
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     color: #fff;
     background-color: rgb(255, 162, 0);
 }
@@ -166,11 +172,14 @@ nav{
     display: flex;
 }
 
-.cart > span{
+.cart > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline: .6rem .3rem ;
+    text-decoration: none;
+    color: #fff;
+    padding-inline: .9rem .6rem ;
+    padding-block: .4rem;
     /* margin-left: 11px; */
     font-size: 20px;
 }
@@ -623,14 +632,14 @@ gap: 1rem;
 }
 
 .innerSunImg{
-    height: 60px;
-    width: 100px;
+    height: 70px;
+    width: 120px;
 }
 
 .innerSunImg > Img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .sunImgCont > p{
@@ -877,6 +886,7 @@ gap: 1rem;
 .free > p{
     font-size: 25px;
     font-family: "Outfit", sans-serif;
+    text-transform: capitalize;
 }
 
 .shippingImg{
@@ -952,6 +962,14 @@ footer{
 .signOpt{
     /* color: #fff;
     background-color: #000; */
+    margin-top: 1rem;
+    display: flex;
+    background-color: #000;
+    color: #ececec;
+    height: 3.5rem;
+    width: 24rem;
+    border: 1px solid #ececec;
+    border-radius: 25px;
 }
 
 .signOpt > input{
@@ -959,9 +977,17 @@ footer{
     color: #ececec;
     height: 3rem;
     width: 24rem;
-    border: 1px solid #ececec;
+    border: none;
     border-radius: 25px;
     padding: .5rem 1.4rem;
+}
+
+.signOpt > button{
+    background-color: #000;
+    background: none;
+    color: #fff;
+    border: none;
+    margin-right: 1rem;
 }
 
 .signOpt > ::placeholder{
@@ -995,12 +1021,17 @@ footer{
     margin-right: 1rem;
 }
 
-.arrowUp > button{
+.arrowUp > a > button{
     border: none;
     color: #fff;
     background-color: rgb(255, 162, 0);
     font-size: 24px;
 }
+
+/* .arrowUp > a > span{
+    background-color: rgb(255, 162, 0);
+    color: #fff;
+} */
 
 .details{
     /* color: #fff; */
@@ -1098,3 +1129,198 @@ footer{
         transform: none;
     }
 }
+
+    @media (max-width: 1024px) {
+        .imageCont {
+            margin-left: 2rem;
+            width: 25rem;
+            gap: 1.5rem;
+        }
+    
+        .imageCont > h1 {
+            font-size: 26px;
+        }
+    
+        .imageCont > h3 {
+            font-size: 18px;
+        }
+    
+        .imageCont > p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .imageCont {
+            margin-left: 1rem;
+            width: 20rem;
+            gap: 1rem;
+        }
+    
+        .imageCont > h1 {
+            font-size: 24px;
+        }
+    
+        .imageCont > h3 {
+            font-size: 16px;
+        }
+    
+        .imageCont > p {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .imageCont {
+            position: relative; /* Prevents overlap */
+            width: 90%;
+            margin: 5% auto;
+            text-align: center;
+            gap: 0.8rem;
+        }
+    
+        .imageCont > h1 {
+            font-size: 22px;
+            color: #e1680b;
+        }
+    
+        .imageCont > h3 {
+            font-size: 14px;
+            color: #e1680b;
+        }
+    
+        .imageCont > p {
+            font-size: 12px;
+            color: #e1680b;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .contOne {
+            gap: 2rem;
+        }
+    
+        .suits,
+        .tShirts {
+            height: 18rem;
+            width: 11rem;
+        }
+    
+        .suitsCont {
+            margin-left: 3rem;
+            font-size: 20px;
+            color: #e1680b;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contOne {
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+        }
+    
+        .suits,
+        .tShirts {
+            height: 16rem;
+            width: 10rem;
+        }
+    
+        .suitsCont {
+            position: relative;
+            margin-left: 0;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 18px;
+            color: #e1680b;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .suits,
+        .tShirts {
+            height: 14rem;
+            width: 9rem;
+            border-radius: 70px;
+        }
+    
+        .suitsCont {
+            font-size: 16px;
+            color: #e1680b;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .category, .freshPicks {
+            width: 30rem;
+        }
+    
+        .shopAll {
+            gap: 2rem;
+        }
+    
+        .shopAll > p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .category, .freshPicks {
+            width: 25rem;
+        }
+    
+        .shopAll {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+    
+        .shopAll > p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .category, .freshPicks {
+            width: 90%;
+            margin: 3rem auto;
+        }
+    
+        .shopAll {
+            gap: 0.5rem;
+        }
+    
+        .shopAll > p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 2rem 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 1.5rem 1rem;
+        }
+    
+        .cardOne, .gucciCard {
+            height: 32rem;
+            max-width: 100%;
+        }
+    
+        .cart {
+            width: 40px;
+            height: 30px;
+            font-size: 20px;
+        }
+    
+        .price > p, .prices > p {
+            font-size: 16px;
+        }
+    }
+    
