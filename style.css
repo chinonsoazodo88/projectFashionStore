@@ -75,7 +75,7 @@ nav{
     font-size: 13px;
 }
 
-.signUp > a{
+.signUp > a , .user{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -158,13 +158,14 @@ nav{
     color: #fff;
 }
 
-.search > button , .cart{
+.search > button , .cart > button{
     /* border: 1px solid #000; */
     border-radius: 20px;
     width: 50px;
     height: 40px;
     color: #fff;
     background-color: rgb(255, 162, 0);
+    cursor: pointer;
 }
 
 .cart{
@@ -172,14 +173,15 @@ nav{
     display: flex;
 }
 
-.cart > a > span{
+.cart > button{
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #fff;
-    padding-inline: .9rem .6rem ;
-    padding-block: .4rem;
+    /* color: #fff; */
+    /* padding-inline: .9rem .4rem ; */
+    /* padding-block: .4rem; */
     /* margin-left: 11px; */
     font-size: 20px;
 }
@@ -238,6 +240,7 @@ nav{
     justify-content: center;
     align-items: center;
     background-color: #DEB887;
+    cursor: pointer;
 }
 
 .shop > p , .shop > button > p{
@@ -254,6 +257,7 @@ nav{
     width: 35rem;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 5rem auto;
 }
 
@@ -267,7 +271,6 @@ nav{
 }
 
 .suits{
-    /* border: 1px solid #000; */
     height: 20rem;
     width: 12rem;
     border-radius: 95px;
@@ -611,7 +614,6 @@ gap: 1rem;
 }
 
 .sunlight{
-    /* border: 1px solid #000; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
@@ -651,7 +653,6 @@ gap: 1rem;
 }
 
 .fashionBlog{
-    /* border: 2px solid #000; */
     margin: 7rem 0;
     display: flex;
     justify-content: center;
@@ -835,7 +836,6 @@ gap: 1rem;
 }
 
 .footcards{
-    /* border: 2px solid red; */
     height: 30rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1028,11 +1028,6 @@ footer{
     font-size: 24px;
 }
 
-/* .arrowUp > a > span{
-    background-color: rgb(255, 162, 0);
-    color: #fff;
-} */
-
 .details{
     /* color: #fff; */
     background-color: #000;
@@ -1128,199 +1123,155 @@ footer{
         display: block;
         transform: none;
     }
+
+    .imageCont , .classyCont{
+        width: 80%;
+    }
+
+    .category , .freshPicks , .categoryOne{
+        width: 80%;
+    }
+
+    .contOne{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .suits , .tShirts{
+        position: relative;
+    }
+    
+    .suitsCont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards , .cardsTwo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardOne , .gucciCard , .cardTwo{
+        width: 100%;
+    }
+
+    .quality{
+        flex-direction: column;
+        height: 60rem;
+        margin: 5.5rem 1rem 2rem 1rem;
+    }
+
+    .best{
+        width: 100%;
+    }
+
+    .bestCont > p{
+        width: 80%;
+    }
+
+    .classy{
+        margin-top: 1rem;
+    }
+
+    .cardsCont{
+        justify-content: space-between;
+    }
+
+    .suggestion{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .forYou{
+        text-align: center;
+    }
+
+    .sunlight{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .fashionBlog{
+        height: 50rem;
+    }
+
+    .frequently{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .questions{
+        width: 21rem;
+    }
+
+    .questionsImg{
+        border: 5px solid #DEB887;
+        border-radius: 500px;
+        height: 42rem;
+        width: 20rem;
+    }
+
+    .questionsImg > img{
+        width: 20rem;
+    }
+
+    .latest{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0 1.5rem;
+        align-items: center;
+    }
+
+    .latest > h2{
+        margin-top: 1rem;
+        width: 20rem;
+    }
+
+    .footcards{
+        height: 90rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem 1.5rem 2rem 1.5rem;
+    }
+
+    .shipping{
+        width: 100%;
+    }
+
+    .free{
+        display: flex;
+        gap: .5rem;
+        margin: auto;
+    }
+    
+    .free > p{
+        font-size: 12px;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    .happy{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .happyCard , .signIn{
+        width: 100%;
+    }
+
+    .signOpt{
+        width: 22rem;
+    }
 }
-
-    @media (max-width: 1024px) {
-        .imageCont {
-            margin-left: 2rem;
-            width: 25rem;
-            gap: 1.5rem;
-        }
-    
-        .imageCont > h1 {
-            font-size: 26px;
-        }
-    
-        .imageCont > h3 {
-            font-size: 18px;
-        }
-    
-        .imageCont > p {
-            font-size: 14px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .imageCont {
-            margin-left: 1rem;
-            width: 20rem;
-            gap: 1rem;
-        }
-    
-        .imageCont > h1 {
-            font-size: 24px;
-        }
-    
-        .imageCont > h3 {
-            font-size: 16px;
-        }
-    
-        .imageCont > p {
-            font-size: 13px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .imageCont {
-            position: relative; /* Prevents overlap */
-            width: 90%;
-            margin: 5% auto;
-            text-align: center;
-            gap: 0.8rem;
-        }
-    
-        .imageCont > h1 {
-            font-size: 22px;
-            color: #e1680b;
-        }
-    
-        .imageCont > h3 {
-            font-size: 14px;
-            color: #e1680b;
-        }
-    
-        .imageCont > p {
-            font-size: 12px;
-            color: #e1680b;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .contOne {
-            gap: 2rem;
-        }
-    
-        .suits,
-        .tShirts {
-            height: 18rem;
-            width: 11rem;
-        }
-    
-        .suitsCont {
-            margin-left: 3rem;
-            font-size: 20px;
-            color: #e1680b;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .contOne {
-            flex-direction: column;
-            align-items: center;
-            gap: 2.5rem;
-        }
-    
-        .suits,
-        .tShirts {
-            height: 16rem;
-            width: 10rem;
-        }
-    
-        .suitsCont {
-            position: relative;
-            margin-left: 0;
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 18px;
-            color: #e1680b;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .suits,
-        .tShirts {
-            height: 14rem;
-            width: 9rem;
-            border-radius: 70px;
-        }
-    
-        .suitsCont {
-            font-size: 16px;
-            color: #e1680b;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .category, .freshPicks {
-            width: 30rem;
-        }
-    
-        .shopAll {
-            gap: 2rem;
-        }
-    
-        .shopAll > p {
-            font-size: 18px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .category, .freshPicks {
-            width: 25rem;
-        }
-    
-        .shopAll {
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-    
-        .shopAll > p {
-            font-size: 16px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .category, .freshPicks {
-            width: 90%;
-            margin: 3rem auto;
-        }
-    
-        .shopAll {
-            gap: 0.5rem;
-        }
-    
-        .shopAll > p {
-            font-size: 14px;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .cards {
-            grid-template-columns: repeat(2, 1fr);
-            margin: 2rem 1rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .cards {
-            grid-template-columns: repeat(1, 1fr);
-            margin: 1.5rem 1rem;
-        }
-    
-        .cardOne, .gucciCard {
-            height: 32rem;
-            max-width: 100%;
-        }
-    
-        .cart {
-            width: 40px;
-            height: 30px;
-            font-size: 20px;
-        }
-    
-        .price > p, .prices > p {
-            font-size: 16px;
-        }
-    }
-    
